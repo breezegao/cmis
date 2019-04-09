@@ -5,21 +5,29 @@
     <title>Login</title>
 </head>
 <body>
-<form action="/welcome"   method="post">
+<form action="/shrcbcmis/welcome"   method="post">
 
-    <a>&nbsp;&nbsp;用户名：</a>
-    <input type="text"  name="userName" id="userName" size="19"></input>
+    <a>&nbsp&nbsp用户名：</a>
+    <input type="text"  name="userName" size="19"></input>
     <br>
-    <a>&nbsp;&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;码：</a>
-    <input type="password"  name="password" id="password"></input>
+    <a>&nbsp&nbsp&nbsp密&nbsp&nbsp&nbsp码：</a>
+    <input type="password"  name="password" ></input>
     <br>
     <br>
-    &nbsp;&nbsp;&nbsp;<input type="submit" value="登录" />
-    &nbsp;&nbsp;&nbsp;
-    <a href="/register" target="_blank">注册</a>
+    &nbsp&nbsp&nbsp<input type="submit" value="登录" />
+    &nbsp&nbsp&nbsp
+    <a href="/shrcbcmis/register" target="_blank">注册</a>
 
 
 </form>
 </body>
-
+<script>
+    function checkUser(){
+        var userName = document.getElementById("userName");
+        var password = document.getElementById("password");
+        if(null==userName ||""==userName){
+            alert("请输入用户名");
+        }
+    }
+</script>
 </html>
