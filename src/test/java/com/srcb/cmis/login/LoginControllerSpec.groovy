@@ -7,7 +7,7 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-class LoginControllerTest extends Specification{
+class LoginControllerSpec extends Specification{
 
     def "test LoginController.login()"(){
         given:"mockMvc is created by LoginController"
