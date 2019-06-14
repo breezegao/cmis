@@ -47,6 +47,7 @@
 			<groupId>org.codehaus.groovy</groupId>
 			<artifactId>groovy-all</artifactId>
 			<version>2.4.0</version>
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>
@@ -71,6 +72,19 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 
 
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.18</version>
+				<configuration>
+					<includes>
+						<!-- By default only files ending in 'Test' will be included, so also include support for Spock style naming convention -->
+						<!-- Oddly enough for Groovy files, *Spec.groovy does not work, but *Spec.java does -->
+						<include>**/*Test.java</include>
+						<include>**/*Test.groovy</include>
+					</includes>
+				</configuration>
 			</plugin>
 			</plugins>
 		<finalName>shrcbcmis</finalName>
