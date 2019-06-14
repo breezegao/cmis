@@ -1,12 +1,12 @@
 package com.srcb.cmis.login
 
 import org.springframework.http.MediaType
-import spock.lang.Specification;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.test.web.servlet.MockMvc
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
+import org.springframework.test.web.servlet.result.MockMvcResultHandlers
+import org.springframework.test.web.servlet.setup.MockMvcBuilders
+import spock.lang.Specification
+
 class LoginControllerSpec extends Specification{
 
     def "test LoginController.login()"(){
@@ -48,5 +48,6 @@ class LoginControllerSpec extends Specification{
         def responseMessage = mvcResult.getResponse().getContentAsString()
         then:"should return:Hello,Jack"
         responseMessage == "Hello,Jack"
+
     }
 }
